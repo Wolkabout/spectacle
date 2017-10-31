@@ -29,10 +29,12 @@ module.exports = function(options, specData) {
       var path = copy.paths[pathName]
       var pathParameters = path.parameters || []
       Object.keys(path).forEach(function(method) {
+/* 
         if (httpMethods.indexOf(method) < 0) {
           delete path[method]
           return
         }
+*/
         var operation = path[method]
         operation.path = pathName
         operation.method = method
