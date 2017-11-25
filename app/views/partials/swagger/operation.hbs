@@ -30,8 +30,12 @@
         <span class="operation-path">{{path}}</span>
       </span>
     {{/if}}
+    
+  {{#if deprecated}}
+  <span style="color: red;">({{md deprecated stripParagraph="true"}})</span>
+  {{/if}}
   </h2>
-
+  
   {{! Insert the operation name here if not in the title }}
   {{#if summary}}
     <div class="doc-row">
